@@ -1,7 +1,10 @@
 ---
 applications:
-  - name: dotnet_core_hello_world
-    disk_quota: 1536M
+  - name: hello-dotnet
+    disk_quota: 350M
+    memory: 170M
     random-route: true
+    stack: cflinuxfs2
+    buildpack: https://github.com/cloudfoundry/dotnet-core-buildpack.git
     env:
       CACHE_NUGET_PACKAGES: false
